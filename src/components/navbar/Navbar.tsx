@@ -14,7 +14,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
             <NavigationList />
             <button
                 onClick={toggleTheme}
-                className="bg-accent text-text px-3 py-1 rounded-lg ml-auto"
+                className="bg-accent text-default px-3 py-1 rounded-lg ml-auto"
             >
                 {theme === "light" ? "🌙" : "☀️"}
             </button>

@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import useTheme from "./hooks/UseTheme";
 import Navbar from "./components/navbar/Navbar";
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 
 export default function App() {
   const { theme, toggleTheme } = useTheme();

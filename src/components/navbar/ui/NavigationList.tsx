@@ -1,10 +1,10 @@
-import NavigationButton from "@/components/ui/NavigationButton";
+import NavigationButton from "@/components/ui/buttons/NavigationButton";
 
 export default function NavigationList() {
     const navLinks = [
-        { name: "Home", to: "/" },
-        { name: "Calculadora", to: "/ip-calc" },
-        { name: "Sobre", to: "/about" },
+        { name: "IPV4", to: "/ipv4" },
+        { name: "IPV6", to: "/ipv6" },
+        { name: "About", to: "/about" },
     ];
 
     return (

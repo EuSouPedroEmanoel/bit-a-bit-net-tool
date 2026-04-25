@@ -6,8 +6,8 @@ export default function Homebutton() {
         < Link
             to="/"
             className="flex items-center gap-4 bg-amber-50 dark:bg-blue-900 py-2 px-4 rounded-2xl interface-transition hover:duration-300 hover:bg-accent-hover" >
-            <Signal className="text-text interface-transition" />
-            <p className="text-text interface-transition">Bit a Bit</p>
+            <Signal className="text-default interface-transition" />
+            <p className="text-default interface-transition">Bit a Bit</p>
         </Link >
     )
 }

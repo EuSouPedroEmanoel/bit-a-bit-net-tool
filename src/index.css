@@ -1,21 +1,30 @@
 @import "tailwindcss";
 
+
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --background: #f8fafc;
-  --accent: #7b92fa;
+  --accent: #99abff;
   --accent-hover: rgb(170, 194, 220);
-  --surface: #ffffff;
+  --surface: #0051ff29;
   --text: #111827;
+  --border: #0056b8;
 }
 
 .dark {
   --background: #000b1a;
   --accent: #000971;
   --accent-hover: #06118a;
-  --surface: #010c2d;
+  --surface: #061541;
   --text: #ffffff;
+  --border: #0077ff;
+}
+
+mark {
+    background-color: transparent;
+    color: inherit;
 }
 
 @theme {
@@ -24,8 +33,25 @@
   --color-accent-hover: var(--accent-hover);
   --color-surface: var(--surface);
   --color-text: var(--text);
+  --color-border: var(--border);
 }
 
 @utility interface-transition {
   @apply transition-colors duration-500 ease-in-out;
+}
+
+@utility text-default {
+  @apply text-text interface-transition;
+}
+
+@utility text-h2 {
+  @apply text-default font-black text-xl;
+}
+
+@utility span-accent-text {
+  @apply bg-[#7ea6d1] dark:bg-[#4494e9] text-black rounded-xl px-2 interface-transition
+}
+
+@utility card {
+  @apply border dark:border-border
 }
