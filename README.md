@@ -20,7 +20,7 @@ A responsive IP calculator and subnetting tool developed as an academic project 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/bit-a-bit-ip-calculator.git
+   git clone https://github.com/EuSouPedroEmanoel/bit-a-bit-ip-calculator.git
    ```
 
 2. **Navigate to the project folder:**
