@@ -1,6 +1,9 @@
 import NavigationButton from "@/components/ui/buttons/NavigationButton";
 import Card from "@/components/ui/Card";
 import { ArrowRightIcon } from "lucide-react";
+import Container from "@/components/ui/Container";
+import HomeShortcutList from "@/data/HomeShortcutsList";
+
 
 const cardData = {
     ref: "https://www.diariodocentrodomundo.com.br/wp-content/uploads/2023/04/internet-1.jpg",
@@ -16,9 +19,9 @@ const link = {
 export default function Home() {
 
     return (
-        <main className="flex m-10">
+        <main className="flex m-10 gap-10">
             <article className="flex-1">
-                <Card img={cardData} link={<NavigationButton link={link} className="" />}>
+                <Card img={cardData} other={<NavigationButton link={link} className="" />}>
                     <h2 className="text-h2 leading-8">
                         Your go-to solution for <span className="span-accent-text">subnet calculations</span>. From host ranges to binary conversion, we have <span className="span-accent-text">everything you need</span> to manage  <span className="span-accent-text">your network</span>.
                     </h2>
@@ -27,7 +30,13 @@ export default function Home() {
 
             </article>
             <aside className="flex-1">
+                <Container className="card">
+                    <h2 className="text-h2 flex justify-center mt-2">SHORTCUTS:</h2>
+                    <div className="w-full flex justify-center">
+                        <HomeShortcutList />
+                    </div>
 
+                </Container>
             </aside>
         </main >
     );

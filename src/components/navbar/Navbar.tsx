@@ -1,6 +1,6 @@
 import { type Theme } from "../../hooks/UseTheme";
 import Homebutton from "./ui/HomeButton";
-import NavigationList from "./ui/NavigationList";
+import NavigationList from "../../data/NavigationList";
 
 interface NavbarProps {
     theme: Theme;

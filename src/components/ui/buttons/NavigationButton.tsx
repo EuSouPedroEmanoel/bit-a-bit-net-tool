@@ -14,15 +14,19 @@ interface NavigationButtonProps {
 
 export default function NavigationButton({ link, className }: NavigationButtonProps) {
     return (
-        <div className={`ml-4 group flex items-center gap-1 ${className}`}>
-            <Link
-                to={link.to}
-                className="text-text group-hover:text-text/70 transition-colors"
-            >
+        <Link
+            to={link.to}
+            className={`ml-4 group flex items-center gap-1 transition-colors ${className}`}
+        >
+            <span className="text-text group-hover:text-text/70 transition-colors">
                 {link.name}
-            </Link>
+            </span>
 
-            {link.node && (<span className="text-text group-hover:text-text/70 transition-colors">{link.node}</span>)}
-        </div>
+            {link.node && (
+                <span className="text-text group-hover:text-text/70 transition-colors">
+                    {link.node}
+                </span>
+            )}
+        </Link>
     );
 }

@@ -5,13 +5,13 @@ interface CardProps {
         ref: string;
         alt: string;
     };
-    children: ReactNode;
-    link?: ReactNode;
+    children?: ReactNode;
+    other?: ReactNode;
 }
 
-export default function Card({ img, children, link }: CardProps) {
+export default function Card({ img, children, other }: CardProps) {
     return (
-        <div className="card bg-surface/60 hover:bg-surface transition-all duration-500 ease-in-out rounded-2xl hover:scale-[1.02]">
+        <div className="card">
             <div className={`w-full group`}>
                 {img && (
                     <img
@@ -26,7 +26,7 @@ export default function Card({ img, children, link }: CardProps) {
 
             </div>
             <div className="p-4">
-                {link && link}
+                {other && other}
             </div>
         </div>
 
