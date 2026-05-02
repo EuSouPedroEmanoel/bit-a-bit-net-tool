@@ -50,7 +50,7 @@ mark {
 }
 
 @utility span-accent-text {
-  @apply bg-[#7ea6d1] dark:bg-[#4494e9] text-black rounded-xl px-2 interface-transition
+  @apply bg-[#7ea6d1] dark:bg-[#4494e9] text-black rounded-xl px-2 interface-transition;
 }
 
 @utility container-center {
@@ -58,9 +58,23 @@ mark {
 }
 
 @utility card {
+  /* REMOVIDO OS ESPAÇOS DENTRO DO RGBA AQUI */
   @apply border dark:border-border bg-surface/60 hover:bg-surface transition-all duration-500 ease-in-out rounded-2xl hover:scale-[1.02] dark:shadow-[0_0_20px_rgba(0,119,255,0.1)] dark:hover:shadow-[0_0_40px_rgba(0,119,255,0.4)];
 }
 
 @utility button {
   @apply flex items-center justify-center gap-2 bg-accent hover:bg-accent-hover text-text py-2 px-4 rounded-2xl cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1 active:translate-y-0 active:shadow-inner;
+}
+
+@utility input-text {
+  @apply w-full h-10 mx-10 my-4 p-2 rounded-2xl bg-surface border border-border/40 text-white placeholder:text-white/40 transition-all outline-none;
+
+  &:hover {
+    @apply border-border/80;
+  }
+
+  &:focus {
+    /* REMOVIDO OS ESPAÇOS DENTRO DO RGBA AQUI TAMBÉM */
+    @apply border-border shadow-[0_0_15px_rgba(0,119,255,0.4)];
+  }
 }
