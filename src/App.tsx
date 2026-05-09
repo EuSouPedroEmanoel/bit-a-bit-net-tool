@@ -1,18 +1,18 @@
 import { Routes, Route } from "react-router-dom";
-import useTheme from "./hooks/UseTheme";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
+import YourPublicIP from "./pages/your-public-ip/YourPublicIP";
 
 export default function App() {
-  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="h-dvh bg-background interface-transition">
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/your-public-ip" element={<YourPublicIP />} />
       </Routes>
-    </div> // Agora sim, fechamos a div principal corretamente
+    </div>
   );
 }

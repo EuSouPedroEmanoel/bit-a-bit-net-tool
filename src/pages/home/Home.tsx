@@ -3,8 +3,10 @@ import Card from "@/components/ui/Card";
 import { ArrowRightIcon } from "lucide-react";
 import Container from "@/components/ui/Container";
 import HomeShortcutList from "@/data/HomeShortcutsList";
+import HomeSugestionsList from "@/data/HomeSugestionsList";
 import TextInput from "@/components/TextInput";
 import { Link } from "react-router-dom";
+
 
 
 const cardData = {
@@ -39,14 +41,17 @@ export default function Home() {
                     </div>
                 </Container>
 
-                <Container className="card group">
-                    <h2 className="text-h2 flex justify-center mt-2">Enter an IP Address</h2>
-                    <div className="w-full flex justify-center">
-                        <TextInput placeholder="192.168.1.15 or 2001:db8:85a3::8a2e:370:7334" />
+                <Container className="card">
+                    <div className="group">
+                        <h2 className="text-h2 flex justify-center mt-2">Enter an IP Address</h2>
+                        <div className="w-full flex justify-center">
+                            <TextInput placeholder="192.168.1.15 or 2001:db8:85a3::8a2e:370:7334" />
+                        </div>
+                        <Link to="/" className="button w-50 mx-auto mb-5">
+                            Calculate
+                        </Link>
                     </div>
-                    <Link to="/" className="button w-50 mx-auto mb-5">
-                        Calculate
-                    </Link>
+                    <HomeSugestionsList />
                 </Container>
             </aside>
         </main >
